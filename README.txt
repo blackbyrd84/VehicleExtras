@@ -1,7 +1,7 @@
 ﻿# VehicleExtras Plugin for GTA V
 
 **Author:** blackbyrd
-**Version:** 1.1.0
+**Version:** 1.0.2
 **Description:**  
 This plugin adds console commands and an in-game menu to toggle vehicle extras and performance modifications in Grand Theft Auto V. Perfect for customizing vehicles in real-time without needing a full trainer.
 
@@ -76,6 +76,3 @@ Additionally, sometimes when you disable an extra, it may require a supporting e
 v1.0.0 - First Release
 v1.0.1 - Corrected default keybind ini
 v1.0.2 - Restructured zip layout + updated Readme.txt
-v1.1.0 - Added Vehicle Performance Modification submenu
-	- Added options to modify vehicle performance (Engine, Brakes, Transmission, Turbo)
-	- Updated Readme.txt with new features
