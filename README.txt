@@ -1,7 +1,7 @@
 ﻿# VehicleExtras Plugin for GTA V
 
 **Author:** blackbyrd
-**Version:** 1.1.1
+**Version:** 1.1.2
 **Description:**  
 This plugin adds an in-game menu to toggle vehicle extras and performance modifications in Grand Theft Auto V. Perfect for customizing vehicles in real-time without needing a full trainer.
 
@@ -61,6 +61,9 @@ Copy "RAGENativeUI.dll" and "RAGENativeUI.xml" to your GTA V directory:
 > Note: Some extras may require the vehicle to be repaired or reloaded to reappear. 
 Additionally, sometimes when you disable an extra, it may require a supporting extra to be re-enabled first, then disabled, such as Extras 1 and 2 for the COQUETTE hard top.
 
+##GITHUB Repository
+https://github.com/blackbyrd84/VehicleExtras
+
 ##CHANGELOG
 v1.0.0 - First Release
 v1.0.1 - Corrected default keybind ini
@@ -70,3 +73,4 @@ v1.1.0 - Added Vehicle Performance Modification submenu
 	- Updated Readme.txt with new features
 v1.1.1 - Removed console commands
 	-Updated Readme.txt to reflect changes
+v1.1.2 - Added repo link to Readme.txt
