@@ -52,8 +52,9 @@
     <Reference Include="RAGENativeUI">
       <HintPath>..\..\..\..\..\..\Program Files\Rockstar Games\Grand Theft Auto V Legacy - LCPDFR\RAGENativeUI.dll</HintPath>
     </Reference>
-    <Reference Include="RagePluginHookSDK">
-      <HintPath>..\..\..\..\Downloads\RAGEPluginHook_1_122_pursuit_crashes_test\SDK\RagePluginHookSDK.dll</HintPath>
+    <Reference Include="RagePluginHookSDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\RagePluginHookSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,15 +86,12 @@ xcopy /Y /I /D "$(ProjectDir)bin\x64\Debug\VehicleExtras.dll" "C:\Program Files\
 xcopy /Y /I /D "$(ProjectDir)bin\x64\Debug\VehicleExtras.pdb" "C:\Program Files\Rockstar Games\Grand Theft Auto V Legacy - LCPDFR\plugins\"
 xcopy "$(ProjectDir)VehicleExtras.ini" "$(TargetDir)" /Y
 xcopy "$(ProjectDir)README.txt" "$(TargetDir)" /Y
-powershell -Command "&amp; { $p='$(ProjectDir)'; $t='$(TargetDir)'; $rd=Join-Path $p 'References'; $v=(Select-String -Path \"$p\readme.txt\" -Pattern '^\*\*Version:\*\*\s*(.+)$').Matches[0].Groups[1].Value; $z=Join-Path $p \"VehicleExtras-v$v.zip\"; $pd=Join-Path $p 'TempPlugins'; $zr=Join-Path $p 'TempZipRoot'; if(Test-Path $z){Remove-Item $z}; if(Test-Path $pd){Remove-Item $pd -Recurse}; if(Test-Path $zr){Remove-Item $zr -Recurse}; New-Item -ItemType Directory -Path $pd | Out-Null; Copy-Item \"$t\VehicleExtras.dll\" $pd; Copy-Item \"$t\VehicleExtras.pdb\" $pd; Copy-Item \"$p\VehicleExtras.ini\" $pd; New-Item -ItemType Directory -Path $zr | Out-Null; Copy-Item $pd -Destination (Join-Path $zr 'plugins') -Recurse; Copy-Item \"$rd\RAGENativeUI.dll\" $zr; Copy-Item \"$rd\RAGENativeUI.xml\" $zr; Copy-Item \"$p\readme.txt\" $zr; Add-Type -AssemblyName 'System.IO.Compression.FileSystem'; [System.IO.Compression.ZipFile]::CreateFromDirectory($zr, $z); Remove-Item $pd -Recurse; Remove-Item $zr -Recurse }"
-
 ) else (
 xcopy /Y /I /D "$(ProjectDir)bin\x64\Release\VehicleExtras.dll" "C:\Program Files\Rockstar Games\Grand Theft Auto V Legacy - LCPDFR\plugins\"
 xcopy /Y /I /D "$(ProjectDir)bin\x64\Release\VehicleExtras.pdb" "C:\Program Files\Rockstar Games\Grand Theft Auto V Legacy - LCPDFR\plugins\"
 xcopy "$(ProjectDir)VehicleExtras.ini" "$(TargetDir)" /Y
 xcopy "$(ProjectDir)README.txt" "$(TargetDir)" /Y
-powershell -Command "&amp; { $p='$(ProjectDir)'; $t='$(TargetDir)'; $rd=Join-Path $p 'References'; $v=(Select-String -Path \"$p\readme.txt\" -Pattern '^\*\*Version:\*\*\s*(.+)$').Matches[0].Groups[1].Value; $z=Join-Path $p \"VehicleExtras-v$v.zip\"; $pd=Join-Path $p 'TempPlugins'; $zr=Join-Path $p 'TempZipRoot'; if(Test-Path $z){Remove-Item $z}; if(Test-Path $pd){Remove-Item $pd -Recurse}; if(Test-Path $zr){Remove-Item $zr -Recurse}; New-Item -ItemType Directory -Path $pd | Out-Null; Copy-Item \"$t\VehicleExtras.dll\" $pd; Copy-Item \"$t\VehicleExtras.pdb\" $pd; Copy-Item \"$p\VehicleExtras.ini\" $pd; New-Item -ItemType Directory -Path $zr | Out-Null; Copy-Item $pd -Destination (Join-Path $zr 'plugins') -Recurse; Copy-Item \"$rd\RAGENativeUI.dll\" $zr; Copy-Item \"$rd\RAGENativeUI.xml\" $zr; Copy-Item \"$p\readme.txt\" $zr; Add-Type -AssemblyName 'System.IO.Compression.FileSystem'; [System.IO.Compression.ZipFile]::CreateFromDirectory($zr, $z); Remove-Item $pd -Recurse; Remove-Item $zr -Recurse }"
-
-)</PostBuildEvent>
+)
+powershell -Command "&amp; { $p='$(ProjectDir)'; $t='$(TargetDir)'; $rd=Join-Path $p 'References'; $v=(Select-String -Path \"$p\readme.txt\" -Pattern '^\*\*Version:\*\*\s*(.+)$').Matches[0].Groups[1].Value; $z=Join-Path $p \"VehicleExtras-v$v.zip\"; $pd=Join-Path $p 'TempPlugins'; $zr=Join-Path $p 'TempZipRoot'; if(Test-Path $z){Remove-Item $z}; if(Test-Path $pd){Remove-Item $pd -Recurse}; if(Test-Path $zr){Remove-Item $zr -Recurse}; New-Item -ItemType Directory -Path $pd | Out-Null; Copy-Item \"$t\VehicleExtras.dll\" $pd; Copy-Item \"$t\VehicleExtras.pdb\" $pd; Copy-Item \"$p\VehicleExtras.ini\" $pd; New-Item -ItemType Directory -Path $zr | Out-Null; Copy-Item $pd -Destination (Join-Path $zr 'plugins') -Recurse; Copy-Item \"$rd\RAGENativeUI.dll\" $zr; Copy-Item \"$rd\RAGENativeUI.xml\" $zr; Copy-Item \"$p\readme.txt\" $zr; Add-Type -AssemblyName 'System.IO.Compression.FileSystem'; [System.IO.Compression.ZipFile]::CreateFromDirectory($zr, $z); Remove-Item $pd -Recurse; Remove-Item $zr -Recurse }"</PostBuildEvent>
   </PropertyGroup>
 </Project>
