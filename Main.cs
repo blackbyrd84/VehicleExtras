@@ -9,7 +9,7 @@ using Rage.Native;
 using RAGENativeUI;
 using RAGENativeUI.Elements;
 
-[assembly: Plugin("VehicleExtrasConsole", Description = "Console + menu for vehicle extras", Author = "blackbyrd")]
+[assembly: Plugin("VehicleExtras", Description = "UI Menu for vehicle extras", Author = "blackbyrd")]
 
 public class EntryPoint
 {
